@@ -1,0 +1,78 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+body{
+    background-color: #eeee;
+}
+
+a:not(.no-underline):not(.btn){
+    font-weight: 600;
+    padding-bottom:2px;
+    border-bottom: 2px solid #137752;
+    transition: all .2s,opacity .25s;
+    color: #137752;
+}
+
+a:not(.no-underline):not(.btn):hover{
+    padding-bottom: 5px;
+    opacity: 0.7;
+}
+
+.hero img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: .05s ease-in;
+    transform-origin:top left;
+}
+
+
+.hero svg{
+    height: 1.2em;
+}
+
+.btn{
+    border-radius: 8px;
+}
+
+.divider{
+    flex-grow: 1;
+    border-bottom: 1px solid #d1d1d1;
+    margin: 10px;
+}
+
+.more svg{
+    width: 1.2em;
+}
+
+.more li{
+    width: 107%;
+    margin-left: -20px;
+}
+
+.projects li{
+    width: 110%;
+    padding:20px;
+    margin-left: -20px;
+}
+
+.projects li:hover{
+    background-color: #e8e8e8;
+    border-radius: 4px;
+}
+
+.projects svg{
+    width: 1em;
+    display: none;
+}
+
+.social-btn:hover{
+    background-color: #e8e8e8;
+    border-radius: 4px;
+}
+
+.text-area textarea{
+    height:150px;
+}

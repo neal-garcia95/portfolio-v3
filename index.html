@@ -6,14 +6,15 @@
         <title>Neal Garcia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
         <meta name="referrer" content="origin-when-cross-origin" />
-        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="/dist/output.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     </head>
     <body class="mx-auto my-16 max-w-[688px] px-6 text-gray-900 sm:my-32">
         <main>
             
     <header class="hero mb-20 md:mb-32 flex flex-col items-start">
         <div class="flex gap-4">
-                <img class="mt-1" src="/assetsneal.jpg" alt="a pic neal" />
+                <img class="mt-1" src="/assets/neal.jpg" alt="a pic neal" />
             <div class="flex flex-col">
                 <a href="/" class="transition hover:text-gray-500 no-underline"><h1 class="text-lg font-medium">Neal Garcia</h1></a>
                 <div class="text-gray-600">
@@ -38,12 +39,12 @@
                 <p class="text-gray-100">Resume</p>
             </a>
         </div>
-    {% endfor %}
+    </header>
 
     <section class="list mb-20 md:mb-32">
         <h2 class="text-lg font-medium mb-5">Right now, I am:</h2>
         <ul type="a" class="text-gray-600">
-            <li class="mb-3">a. A full-time web developer at MASONRY — a full-service digital agency in Austin, TX.</li>
+            <li class="mb-3">a. A full-time web developer at <a href="https://www.builtbymasonry.com" target="_blank">MASONRY</a> — a full-service digital agency in Austin, TX.</li>
             <li class="mb-3">b. Training for a half-marathon.</li>
             <li class="mb-3">c. Open to freelance work.</li>
         </ul>
@@ -62,7 +63,7 @@
                 <li class="mb-3">Running</li>
                 <li class="mb-3">Road Cycling</li>
                 <li class="mb-3">Exploring the outdoor</li>
-                <li class="mb-3">Chillin' with my dog Sage</li>
+                <li class="mb-3">Chillin' with my dog <a href="https://www.instagram.com/spaceysagey" target="_blank">Sage</a></li>
             </ul>
         </div>
     </section>
@@ -143,7 +144,7 @@
     </section>
 
     <footer class="text-gray-600">
-        © {{ 'now' | date('Y') }} Neal Garcia
+        © 2023 Neal Garcia
     </footer>
         </main>
 
@@ -157,7 +158,6 @@
 
 
 
-        <script src="assets/scripts.js"></script>
-        <script src="assets/scripts.js"></script>
+        <script src="/scripts.js"></script>
     </body>
 </html>
