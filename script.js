@@ -16,7 +16,7 @@ var timeline = new TimelineMax();
 gsap.from(".projects", {
     scrollTrigger: {
         trigger: ".projects",
-        start: 500
+        start: 300
     },
     y: 100,
     opacity: 0,
@@ -25,7 +25,7 @@ gsap.from(".projects", {
 gsap.from(".more", {
     scrollTrigger: {
         trigger: ".more",
-        start: 1200
+        start: 600
     },
     y: 100,
     opacity: 0,
