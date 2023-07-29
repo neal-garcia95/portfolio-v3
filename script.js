@@ -30,3 +30,25 @@ gsap.from(".more", {
     y: 100,
     opacity: 0,
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const container = document.querySelector("body");
+  
+    // Check the user's dark mode preference from localStorage
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+  
+    // Apply the initial dark mode state if the preference is set
+    if (isDarkMode) {
+      container.classList.add("dark-mode");
+    }
+  
+    // Toggle the dark mode on button click
+    darkModeToggle.addEventListener("click", function () {
+      if (container.classList.contains("dark-mode")) {
+        container.classList.remove("dark-mode");
+      } else {
+        container.classList.add("dark-mode");
+      }
+    });
+  });
