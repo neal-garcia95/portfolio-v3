@@ -893,6 +893,7 @@ input:checked + .slider:before {
 .dark-toggle{
   top:10px;
   right:10px;
+  z-index:2;
 }
 
 .hover\:bg-gray-500:hover {
@@ -909,6 +910,10 @@ input:checked + .slider:before {
   .sm\:my-32 {
     margin-top: 8rem;
     margin-bottom: 8rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 }
 

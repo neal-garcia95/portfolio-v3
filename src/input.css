@@ -162,4 +162,5 @@ a:not(.no-underline):not(.btn):hover{
   .dark-toggle{
     top:10px;
     right:10px;
+    z-index:2;
   }
