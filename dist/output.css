@@ -735,6 +735,10 @@ video {
   transition-duration: 150ms;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background-color: #eeee;
   transition: all .2s
@@ -896,6 +900,10 @@ input:checked + .slider:before {
   z-index:2;
 }
 
+#top{
+  scroll-margin-top:150px;
+}
+
 .hover\:bg-gray-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
@@ -910,10 +918,6 @@ input:checked + .slider:before {
   .sm\:my-32 {
     margin-top: 8rem;
     margin-bottom: 8rem;
-  }
-
-  .sm\:w-full {
-    width: 100%;
   }
 }
 
