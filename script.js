@@ -1,11 +1,11 @@
 // import { gsap } from "gsap";
 
 function show(element){
-    element.querySelector("svg").style.display = "block"
+    element.querySelector("svg").style.opacity = "1"
 }
 
 function hide(element){
-    element.querySelector("svg").style.display = "none"
+    element.querySelector("svg").style.opacity = "0"
 }
 
 var timeline = new TimelineMax();
@@ -52,3 +52,75 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  const debouncedHandleScroll = debounce(handleScroll, 10); // Adjust the debounce delay
+
+	window.addEventListener("scroll", debouncedHandleScroll);
+
+	function handleScroll() {
+		var collapseMenu = document.querySelector('.hero');
+    var current = document.querySelector('.img-section')
+    const darkToggle = document.querySelector(".dark-toggle");
+
+		if (window.scrollY >= 170) {
+			if (!collapseMenu.classList.contains('collapsed')) {
+				collapseMenu.classList.add('collapsed');
+        current.style.paddingTop = "300px";
+        darkToggle.style.top = "25px";
+        darkToggle.style.right = "30px";
+			}
+		} else {
+			if (collapseMenu.classList.contains('collapsed')) {
+				collapseMenu.classList.remove('collapsed');
+        current.style.paddingTop = "0";
+        darkToggle.style.top = "10px";
+        darkToggle.style.right = "10px";
+			}
+		}
+	}
+
+	// Debounce function implementation
+	function debounce(func, delay) {
+		let timeoutId;
+		return function () {
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout(func, delay);
+		};
+	}
+
+  (function() {
+    console.clear();
+    
+    const follower = document.querySelector('#follower');
+    
+    let posX = 0;
+    let posY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    const ease = 0.1;
+    
+    function easeTo() {    
+      const followerBounds = follower.getBoundingClientRect();
+      
+      const dX = mouseX - (followerBounds.left + 10);
+      const dY = mouseY - (followerBounds.top + 10);
+      
+      posX += dX * ease;
+      posY += dY * ease;
+    }
+    
+    function update() {
+      easeTo();
+      follower.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;  
+      requestAnimationFrame(update);
+    }
+    
+    function setCoords(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    }
+    
+    document.onmousemove = setCoords;
+    update();
+  })();

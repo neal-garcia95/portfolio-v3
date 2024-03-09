@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Hi! Welcome to my personal portfolio site. - Neal -->
+
 <html lang="en-US">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,20 +17,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js "></script>
 
   </head>
-  <div class="dark-toggle fixed">
-    <label class="switch">
-      <input id="darkModeToggle" type="checkbox">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <body class="mx-auto my-16 max-w-[688px] px-6 text-gray-900 sm:my-32" id="top">
-    
-    <main class="container">
-      <header class="hero mb-20 md:mb-32 flex flex-col items-start">
+  
+ 
+  <body>
+     <div class="dark-toggle fixed">
+      <label class="switch">
+        <input id="darkModeToggle" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div id="follower"></div>
+    <main class="container mx-auto my-16 max-w-[688px] px-6 text-gray-900 sm:my-32" id="top"">
+      <header class="hero  mb-20 md:mb-28 flex flex-col items-start">
         <div class="flex gap-4">
           <img class="mt-1" src="./assets/neal.jpg" alt="a pic of neal" />
           <div class="flex flex-col">
-            <a href="/" class="transition hover:text-gray-500 no-underline"
+            <a href="/" class="hover:text-gray-500 no-underline"
               ><h1 class="text-lg font-medium">Neal Garcia</h1></a
             >
             <div class="text-gray-600">
@@ -87,12 +91,18 @@
         </div>
       </header>
 
-      <section class="currently mb-20 md:mb-32">
+      <section class="img-section">
+        <figure class="mb-20 md:mb-28">
+          <img src="assets/IMG_4611.jpg"/>
+        </figure>
+      </section>
+
+      <section class="currently mb-20 md:mb-28">
         <h2 class="text-lg font-medium mb-5">Right now, I am:</h2>
         <ul type="a" class="text-gray-600">
           <li class="mb-3">
             a. A full-time web developer at
-            <a href="https://www.builtbymasonry.com" target="_blank">MASONRY</a>
+            <span class="font-medium">Masonry</span>
             — a full-service digital agency in Austin, TX.
           </li>
           <li class="mb-3">b. Training for a half-marathon.</li>
@@ -100,7 +110,7 @@
         </ul>
       </section>
 
-      <section class="list mb-20 md:mb-32">
+      <section class="list mb-20 md:mb-28">
         <h2 class="text-lg font-medium mb-5">Things I do:</h2>
         <div class="grid grid-cols-2 gap-4">
           <ul type="a" class="text-gray-600">
@@ -115,7 +125,7 @@
             <li class="mb-3">Exploring the outdoors</li>
             <li class="mb-3">
               Chillin' with my dog
-              <a href="https://www.instagram.com/spaceysagey" target="_blank"
+              <a class="" href="https://www.instagram.com/spaceysagey" target="_blank"
                 >Sage</a
               >
             </li>
@@ -123,7 +133,7 @@
         </div>
       </section>
 
-      <section class="projects mb-20 md:mb-32">
+      <section class="projects mb-20 md:mb-28">
         <h2 class="text-lg font-medium mb-5">Work I've done:</h2>
         <div class="">
           <ul type="a" class="text-gray-600">
@@ -219,11 +229,39 @@
                 </p>
               </a>
             </li>
+            <li class="mb-7" onmouseover="show(this)" onmouseleave="hide(this)">
+              <a
+                href="https://www.rebel-co.com"
+                target="blank"
+                class="social-btn no-underline"
+              >
+                <div class="flex justify-between">
+                  <h3 class="font-medium mb-2">Rebel</h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </div>
+                <p class="text-gray-600">
+                  Front-end development and maintenance the Awwwards nominated website for Rebel Co.
+                </p>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="more mb-20 md:mb-32">
+      <section class="more mb-20 md:mb-28">
         <h2 class="text-lg font-medium mb-5">More</h2>
         <ul type="a" class="text-gray-600">
           <li class="mb-2">
@@ -300,9 +338,10 @@
           </li>
         </ul>
       </section>
+    
       <footer class="text-gray-600 flex justify-between">
-        <p>© 2023 Neal Garcia</p>
-        <a class="no-underline" href="#top">Back to Top</a>
+        <p>© 2024 Neal Garcia</p>
+        <a class="hover:underline hover:underline-offset-4 no-underline" href="#top">Back to Top</a>
       </footer>
     </main>
 
